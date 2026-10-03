@@ -1,0 +1,9 @@
+{
+  "name":"W3Labs AgronomIA",
+  "short_name":"W3Labs Agro",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#f4f7f3",
+  "theme_color":"#16733c",
+  "icons":[{"src":"/assets/logo-mark.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
