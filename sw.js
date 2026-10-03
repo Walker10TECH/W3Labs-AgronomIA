@@ -1,5 +1,5 @@
-const CACHE='w3labs-agronomia-v1';
-const APP=['/','/index.html','/styles.css','/app.js','/firebaseConfig.js','/manifest.webmanifest','/assets/logo-mark.svg'];
+const CACHE='w3labs-agronomia-v2';
+const APP=['/','/index.html','/styles.css','/runtime-config.js','/manifest.webmanifest','/assets/logo-mark.svg','/chunks/01.js','/chunks/02.js','/chunks/03.js','/chunks/04.js','/chunks/05.js','/chunks/06.js','/chunks/07.js','/chunks/08.js','/chunks/09.js','/chunks/10.js','/chunks/entry.js'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(APP)).then(()=>self.skipWaiting())));
-self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
-self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(u.origin===location.origin){e.respondWith(caches.match(e.request).then(c=>c||fetch(e.request).then(r=>{const copy=r.clone();caches.open(CACHE).then(cache=>cache.put(e.request,copy));return r}).catch(()=>caches.match('/index.html'))));}});
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==location.origin)return;e.respondWith(caches.match(e.request).then(c=>c||fetch(e.request).then(r=>{if(r.ok){const copy=r.clone();caches.open(CACHE).then(cache=>cache.put(e.request,copy));}return r}).catch(()=>caches.match('/index.html'))));});
