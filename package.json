@@ -1,0 +1,9 @@
+{
+  "name":"w3labs-agronomia",
+  "version":"1.0.0",
+  "private":true,
+  "description":"W3Labs AgronomIA reconstruído com HTML5, CSS3 e JavaScript ES6+ sem framework de frontend.",
+  "type":"module",
+  "scripts":{"dev":"node server.js","start":"node server.js"},
+  "engines":{"node":">=20"}
+}
