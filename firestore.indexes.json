@@ -1,0 +1,16 @@
+{
+  "indexes":[
+    {"collectionGroup":"pulverizacoes","queryScope":"COLLECTION","fields":[{"fieldPath":"dataAplicacao","order":"DESCENDING"}]},
+    {"collectionGroup":"plantios","queryScope":"COLLECTION","fields":[{"fieldPath":"dataPlantio","order":"DESCENDING"}]},
+    {"collectionGroup":"colheitas","queryScope":"COLLECTION","fields":[{"fieldPath":"dataColheita","order":"DESCENDING"}]},
+    {"collectionGroup":"revisoes","queryScope":"COLLECTION","fields":[{"fieldPath":"dataRevisao","order":"DESCENDING"}]},
+    {"collectionGroup":"diesel","queryScope":"COLLECTION","fields":[{"fieldPath":"data","order":"DESCENDING"}]},
+    {"collectionGroup":"estoqueGeral","queryScope":"COLLECTION","fields":[{"fieldPath":"nome","order":"ASCENDING"}]},
+    {"collectionGroup":"pluviometro","queryScope":"COLLECTION","fields":[{"fieldPath":"dataMedicao","order":"DESCENDING"}]},
+    {"collectionGroup":"porcentagens","queryScope":"COLLECTION","fields":[{"fieldPath":"dataAtualizacao","order":"DESCENDING"}]},
+    {"collectionGroup":"talhoes","queryScope":"COLLECTION","fields":[{"fieldPath":"nome","order":"ASCENDING"}]},
+    {"collectionGroup":"inventario","queryScope":"COLLECTION","fields":[{"fieldPath":"marca","order":"ASCENDING"}]},
+    {"collectionGroup":"manuais","queryScope":"COLLECTION","fields":[{"fieldPath":"titulo","order":"ASCENDING"}]}
+  ],
+  "fieldOverrides":[]
+}
